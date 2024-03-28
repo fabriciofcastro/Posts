@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* variáveis de cores */
+  --white: #ffffff;
+  --gray-100: #e1e1e6;
+  --gray-300:#c1c1cc;
+  --gray-400: #8d8d99;
+  --gray-600: #323238;
+  --gray-700: #29292e;
+  --gray-800: #202024;
+  --gray-900: #121214;
+
+  --green-500: #00875f;
+
+}
+
+body {
+  font-size: 1.6rem;
+
+  background-color: var(--gray-900);
+  color: var(--gray-300);
+  -webkit-font-smoothing: antialiased;
+}
+
+body, textarea, button, input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
