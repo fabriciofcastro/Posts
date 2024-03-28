@@ -4,7 +4,7 @@ export const Posts = () => {
   return (
     <div className={style.post}>
     <article className={style.posts}>
-      <header>
+      <header className={style.header}>
         <div className={style.author}>
           <img className={style.avatar} src="https://github.com/fabriciofcastro.png" alt="" />
           <div className={style.authorInfo}>
@@ -13,7 +13,9 @@ export const Posts = () => {
           </div>
         </div>
         
-        <time title='28 de Março 2024 ' dateTime='2024-03-28 - 19:55:20'></time>
+        <time title='28 de Março 2024 ' dateTime='2024-03-28 - 19:55:20'>
+          Publicado há 1h
+        </time>
       </header>
       <div className={style.content}>
         <p>
@@ -31,6 +33,11 @@ export const Posts = () => {
           </p>
         </p>
       </div>
+
+      <form className={style.commentForm}>
+        <textarea placeholder='Deixe seu comentário' />
+        <button type='submit'>Comentar</button>
+      </form>
     </article>
     </div>
   )
