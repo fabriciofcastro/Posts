@@ -47,7 +47,7 @@ const posts = [
       content: 'fabriciofcastro.developer/romeu '
     },
   ],
-  pubblishedAt: new Date('2024-03-30 21:00:00')
+  publishedAt: new Date('2024-03-30 21:00:00')
 }
 ]
 

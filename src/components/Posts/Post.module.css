@@ -4,8 +4,8 @@
     padding: 3rem;
   }
 
-.post + .post {
-  margin-top: 2.5rem;
+.post  {
+  margin-bottom: 2.5rem;
 }
 
 .content {
