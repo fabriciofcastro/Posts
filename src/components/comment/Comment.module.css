@@ -43,13 +43,13 @@
   background-color: transparent;
   border: 0;
   color: var(--gray-400);
-  cursor: pointer;
   line-height: 0;
   border-radius: 4px;
 }
 
 .commentContent header button:hover {
   color: var(--red-500);
+  cursor: pointer;
 }
 .commentBox p {
   margin-top: 1.6rem;
@@ -60,7 +60,6 @@
   background-color: transparent;
   border: 0;
   color: var(--gray-400);
-  cursor: pointer;
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -70,6 +69,7 @@
 
 .commentBox footer button:hover {
   color: var(--gray-300);
+  cursor: pointer;
 }
 
 .commentBox footer button svg {
