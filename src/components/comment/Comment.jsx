@@ -30,7 +30,11 @@ const Comment = ({content, deleteComment}) => {
                 <Trash size={24} />
             </button>
           </header>
-          <p>{content}</p>
+          <p>
+            {
+              content
+            }
+          </p>
         </div>
         <footer>
           <button>

@@ -46,11 +46,10 @@
   cursor: pointer;
   line-height: 0;
   border-radius: 4px;
- 
 }
 
 .commentContent header button:hover {
-    color: var(--red-500);
+  color: var(--red-500);
 }
 .commentBox p {
   margin-top: 1.6rem;

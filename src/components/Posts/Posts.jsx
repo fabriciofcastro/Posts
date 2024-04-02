@@ -14,10 +14,26 @@ export const Posts = ( {
     content
   } ) => {
 
+    /* ------------------------ States ----------------------- */
+
   const [comments, setComments]  = useState(() => [
     'Post muito bacana, hein?'
   ])  
   const [newCommentText, setNewCommentText] = useState(() => "")
+
+  /* ----------------------- Variáveis -------------------------------- */
+
+  const publishedDateFormatted = format( publishedAt, " d 'de'  LLLL 'às'   HHmm'h' ", {
+    locale: ptBR
+  } )
+
+  const publishedDateRelativeToNow = formatDistanceToNow( publishedAt, {
+    locale: ptBR,
+    addSuffix: true,
+  } )
+
+
+  /* -------------------   Functions ------------------ */
 
   function handleCreateNewComment(e) {
     e.preventDefault()
@@ -33,18 +49,15 @@ export const Posts = ( {
   }
 
   function deleteComment(commentToDelete) {
-    console.log(` deletar comentário ${commentToDelete}`);
+    const commentsWithoutDeleteOne = comments.filter( comment => {
+      return comment != commentToDelete
+    } )
+
+    setComments( () => commentsWithoutDeleteOne )
   }
 
-  const publishedDateFormatted = format( publishedAt, " d 'de'  LLLL 'às' HHmm'h' ", {
-    locale: ptBR
-  } )
+  const isNewCommentEmpty =  newCommentText.length === 0
 
-  const publishedDateRelativeToNow = formatDistanceToNow( publishedAt, {
-    locale: ptBR,
-    addSuffix: true,
-  } )
-  
   return (
     <div className={style.post}>
     <article className={style.posts}>
@@ -83,10 +96,15 @@ export const Posts = ( {
           name='comment'
           value={newCommentText}
           placeholder='Deixe seu comentário'
-          onChange={handleNewCommentChange} />
+          onChange = {handleNewCommentChange}
+          required
+        />
 
         <footer>        
-          <button type='submit'>Comentar</button>
+          <button  
+              disabled={ isNewCommentEmpty }
+              type='submit'> Comentar 
+          </button>
         </footer>
 
       </form>
